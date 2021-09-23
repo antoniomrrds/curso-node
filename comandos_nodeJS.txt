@@ -1,6 +1,6 @@
 npm init --yes = inicia o projeto .json
 npm i express => instalando o framework 
-npm -g nodemon => nodemon para reiniciar o servidor automaticamente
+npm i -g nodemon => nodemon para reiniciar o servidor automaticamente
 npm i body parser > server para pegar o dados da requisão caiu em desuso porque express ja possui
 npm i  ejs => html do lado do servidor
  npm install mysql2 --save = > plugin do mysql connection no projeto

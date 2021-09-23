@@ -1,13 +1,83 @@
 body {
-    background: #1f4037;
+    background: #000000;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
+    background: -webkit-linear-gradient(to right, #0f9b0f, #000000);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #99f2c8, #1f4037);
+    background: linear-gradient(to right, #0f9b0f, #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.img-size{
-    width: 50px;
-    height: 50px;
+
+.nav_bar_stile {
+    border-bottom: 1px solid lime;
 }
 
+/* Tamanho da imagem */
+
+.img-size {
+    max-width: 8vh;
+    border: 1px solid lime;
+    background: url('../img/charada.jpg')no-repeat;
+    background-size: auto;
+}
+
+.img-size:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transform: rotatey(180deg);
+}
+
+.card-stile:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background: #ff0084;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #33001b, #ff0084);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #33001b, #ff0084);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-stile-perguntar {
+    background: #00bf8f;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #001510, #00bf8f);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #001510, #00bf8f);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-stile-perguntar:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.btn-stile {
+    background: #200122;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-stile:hover {
+    background: #4776E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8E54E9, #4776E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.resposta_label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.resposta_card {
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: #ff00cc;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333399, #ff00cc);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

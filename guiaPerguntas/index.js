@@ -38,29 +38,37 @@ app.get('/perguntar', (req, res) => {
 app.post('/salvarPergunta', (req, res) => {
       let titulo = req.body.titulo;
       let descricao = req.body.descricao;
+      if (titulo && descricao) {
+            Pergunta.create({
+                  titulo: titulo,
+                  descricao: descricao
+            }).then(() => {
+                  res.redirect("/");
+            })
+      } else {
 
-      Pergunta.create({
-            titulo: titulo,
-            descricao: descricao
-      }).then(() => {
+            console.log("não enviado !!!")
             res.redirect("/");
-      })
+      }
 });
 
-app.post("/responder",(req,res) => {
+app.post("/responder", (req, res) => {
       let corpo = req.body.corpo;
       let pergunta = req.body.pergunta;
-
-      if(corpo != null || corpo !=undefined){
+      
+      if (corpo) {
 
             Resposta.create({
-                  corpo:corpo,
-                  perguntaId:pergunta
-            }).then(() =>{
-                  res.redirect(`/pergunta/${pergunta}`);    
+                  corpo: corpo,
+                  perguntaId: pergunta
+            }).then(() => {
+                  res.redirect(`/pergunta/${pergunta}`);
             })
-      }else{
-            console.log('Digite uma respota')
+
+      } else {
+            res.redirect(`/pergunta/${pergunta}`);
+            console.log("não enviado !!!")
+
       }
       // create equivale o insert
 })
@@ -73,15 +81,16 @@ app.get("/pergunta/:id", (req, res) => {
       }).then(pergunta => {
             if (pergunta != undefined) {
                   Resposta.findAll({
-                        where:{
-                              PerguntaId:pergunta.id},
-                              order:[['id','DESC']
+                        where: {
+                              PerguntaId: pergunta.id
+                        },
+                        order: [['id', 'DESC']
                         ]
                   }).then(respostas => {
-                        
+
                         res.render("pergunta", {
                               pergunta: pergunta,
-                              respostas:respostas
+                              respostas: respostas
                         });
                   })
 

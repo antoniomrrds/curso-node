@@ -5,6 +5,8 @@ npm i body parser > server para pegar o dados da requisão caiu em desuso porque
 npm i  ejs => html do lado do servidor
 npm install mysql2 --save = > plugin do mysql connection no projeto
 
+npm install --save (e o nome da dependencia) 
+
 
 conectando pelo cmd 
 

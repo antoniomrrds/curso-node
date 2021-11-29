@@ -5,6 +5,9 @@ npm i body parser > server para pegar o dados da requisão caiu em desuso porque
 npm i  ejs => html do lado do servidor
 npm install mysql2 --save = > plugin do mysql connection no projeto
 
+
+npm install  --save bcryptjs => hash para senha para não salvar
+npm install --save express-session => salva a seção do usuario 
 npm install --save (e o nome da dependencia) 
 
 
@@ -12,7 +15,7 @@ conectando pelo cmd
 
 mysql -h localhost -u root -p
 
-caso de erro de anutentificacao no myql
+caso de erro de autentificacao no myql
 
 ALTER USER 'root'@'localhost' IDENTIFIED with mysql_native_password BY 'reis2310'
 

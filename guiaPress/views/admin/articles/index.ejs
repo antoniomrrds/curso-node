@@ -36,6 +36,9 @@
                                 <form action="/articles/delete" method="post" class="d-inline"
                                     onsubmit="confirmarDelecao(event,this)">
                                     <input type="hidden" name="id" value="<%= article.id %>">
+                                  
+                                    <a href="/admin/articles/edit/<%= article.id %>" class="btn btn-warning ms-2"> <i class="fas fa-edit"></i></a>
+
                                     <button class="btn btn-danger ms-3" style="background:red"> <i
                                             class="fas fa-trash-alt"></i></i></button>
                                 </form>

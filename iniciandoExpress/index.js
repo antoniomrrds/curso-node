@@ -21,7 +21,7 @@ app.get('/meuMundo/:nome', function(req,res){
     if(name === 'Antonio')   return res.send(`O grande ${name}`)
     else  return res.send(`Seja bem vindo`)
     });
-//Nete exemplo abaixo tem umm exemplo de o query params 
+//Neste exemplo abaixo tem umm exemplo de o query params 
 //para poder pegar direto da url usa a integoração e o nome e valor de atribuição= ?canal=scorpion
 app.get('/youtube', function(req,res){
     let canal = req.query["canal"]

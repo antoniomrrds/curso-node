@@ -25,7 +25,7 @@
                     <a href="/admin/categories/edit/<%= category.id %>" class="btn btn-warning ms-2"> <i class="fas fa-edit"></i></a>
                   <form action="/categories/delete" method="post" class="d-inline" onsubmit="confirmarDelecao(event,this)">
                     <input  type="hidden" name="id"  value="<%= category.id %>">
-                      <button class="btn btn-danger ms-3" style="background:red"> <i class="fas fa-trash-alt"></i></i></button>
+                      <button class="btn btn-danger ms-3" style="background:red"> <i class="fas fa-trash-alt"></i></button>
                     </form>
 
                 </th>

@@ -1,0 +1,18 @@
+<%- include('../../partials/header')%>
+
+        <div class="container">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h2>Login de Administrador</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/authenticate" method="post">
+                        <input class="form-control mb-3" type="email" name="email" placeholder="Digite seu email">
+                        <input class="form-control mb-3" type="password" name="password" placeholder="Digite sua senha">
+                        <button type="submit" class="btn btn-success btn-block w-100">Logar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../../partials/footer')%>

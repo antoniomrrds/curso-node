@@ -24,6 +24,8 @@ connection
 //1000 = 1segundo
 app.use(session({
       secret: 'scorpion',
+      resave:true,
+      saveUninitialized:true,
       cookie: {
             maxAge:60000
       }

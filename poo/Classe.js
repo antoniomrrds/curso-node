@@ -4,22 +4,24 @@ class Filme{
         this.titulo='',
         this.nome='',
         this.genero='',
-        this.ano=0,
+        this.ano = 0
         this.diretor=0,
         this.atores=[],
         this.duracao=0
     }
 
     Reproduzir(){
-        console.log('Reproduzindo ...')
+      return  console.log('Reproduzindo ...')
     }
     Avancar(){
-        console.log('Avancar =>')
+       return console.log('Avancar =>')
     }
     Pausar(){
-        console.log('pausado !!!')
+       return console.log('pausado !!!')
     }
     Fechar(){
-        console.log('Fechar x')
+       return console.log('Fechar x')
     }
 }
+
+ module.exports = Filme

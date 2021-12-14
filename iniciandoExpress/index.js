@@ -11,6 +11,9 @@ app.get('/imagem', function(req,res){
 res.send(`<img class="NOVO" src="https://images4.alphacoders.com/665/thumbbig-665374.webp" alt="asd" width="500" height="600">`)
 });
 
+app.get('/',(req,res)=>{
+    res.send('<h1>Seja Bem vindo</h1>')
+})
 // parametros :e nome do parametro
 
 app.get('/meuMundo/:nome', function(req,res){

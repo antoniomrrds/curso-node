@@ -11,6 +11,23 @@ npm install --save express-session => salva a seção do usuario
 npm install --save (e o nome da dependencia) 
 
 
+npm  i html-pdf --save => gerando html em pdf 
+
+
+
+---------- js e html -----------------
+
+
+atributos custumizados == data-(o nome do atributo) ex => data-nome="obj.nome"
+
+
+
+--------CONSUMINDO API---------------
+
+npm install cors --save  => serve para destravar o uso de api locais em endereco diferente 
+
+npm install --save express-session => salva a seção do usuario 
+
 conectando pelo cmd 
 
 mysql -h localhost -u root -p

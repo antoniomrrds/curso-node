@@ -18,8 +18,8 @@ class handlerFile{
 
 
 
-let handlerJson = new handlerFile('guiaConverter\\Project read and Write\\ReadWrite.json')
-let handlerTxt = new handlerFile('guiaConverter\\exemplo.txt')
+let handlerJson = new handlerFile('guiaConverter/Project read and Write/ReadWrite.json')
+let handlerTxt = new handlerFile('guiaConverter/exemplo.txt')
 
 function newCurso(nome,curso,categoria){
     let json = {

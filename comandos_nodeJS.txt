@@ -28,6 +28,8 @@ npm install cors --save  => serve para destravar o uso de api locais em endereco
 
 npm install --save express-session => salva a seção do usuario 
 
+npm install --save jsonwebtoken => serve para authentificar a Api
+
 conectando pelo cmd 
 
 mysql -h localhost -u root -p

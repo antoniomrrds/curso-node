@@ -27,6 +27,7 @@ atributos custumizados == data-(o nome do atributo) ex => data-nome="obj.nome"
 npm install cors --save  => serve para destravar o uso de api locais em endereco diferente 
 
 npm install --save express-session => salva a seção do usuario 
+npm install --save cookie-parser => Analise o Cookiecabeçalho e preencha req.cookiescom um objeto codificado pelos nomes dos cookies.
 
 npm install --save jsonwebtoken => serve para authentificar a Api
 

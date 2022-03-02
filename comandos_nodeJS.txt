@@ -4,13 +4,13 @@ npm i -g nodemon => nodemon para reiniciar o servidor automaticamente
 npm i body parser > server para pegar o dados da requisão caiu em desuso porque express ja possui
 npm i  ejs => html do lado do servidor
 npm install mysql2 --save = > plugin do mysql connection no projeto
-
-
+npm i --save lodash biblioteca javascript com varias funcionalidades para trabalhar com dados 
+npm install bulma => e voce coloca o caminho no main.js e pronto pode usar no projeto todo
 npm install  --save bcryptjs => hash para senha para não salvar
 npm install --save express-session => salva a seção do usuario 
 npm install --save (e o nome da dependencia) 
 
-
+npm intall axios => serve para comunicar com uma api criada ou consumir uma
 npm  i html-pdf --save => gerando html em pdf 
 
 
@@ -39,3 +39,92 @@ caso de erro de autentificacao no myql
 
 ALTER USER 'root'@'localhost' IDENTIFIED with mysql_native_password BY 'reis2310'
 
+vue js 
+
+--- npm run serve 
+ vue create (nome do projeto sem colchete)
+
+ one bind
+
+ :value="nome"
+
+ two way data binding
+
+ v-model="nome"
+
+ props 
+
+ data() => para dados
+ props:{
+     nome : String
+     client: object
+      } 
+ recebe o tipo de data que ira receber
+
+diretivas 
+v-if usa uma condicional javascript 
+e 
+v-else e o que nao entrar no v-else
+e 
+v-show = ele e igual ao v-if porem ele so esconde o elemento ja o v-if destroi quando nao passa não condicional
+
+ <p v-if="showIdade === true"> idade: {{cliente.idade}}</p>
+    <p v-show="showIdade === true"> idade: {{cliente.idade}}</p>
+    <p v-else> O usuário esta escondeu a idade !!! {{cliente.idade}}</p>
+
+
+  <div :class="{'cliente':!isPremium,'cliente-premium':isPremium}">
+
+  class condicionais
+  cliente e uma classe de estilização de css  e isPremium e uma variavel booleana
+      <div :class="{'cliente':!isPremium,'cliente-premium':isPremium}">
+
+tem como passar estado do component filho para o pai atraves do this.$emit(nome da emissao , {
+  de dados que desejar enviar para o pai inclusive o propio component 
+})
+
+ emitirEventoDelete(){
+      console.log('emitindo do filho')
+      this.$emit("meDelete",{
+        component:this, => desta forma consigo passar o componentvue 
+        curso:'Formação node js',
+
+        emPromocao:true
+        
+      })
+
+ }
+
+    <ClienteProps :cliente="cliente" @meDelete="deletarUsuario()" nome do evenrto de emissao/>
+
+    rotas no vue js estrutura
+ ao criar o projeto selecionar o manual e seleciaonar com espaço as opçoes que deseja    
+
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Cadastro from '../views/Cadastro.vue'
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/cadastro/:dado',
+    name: 'Cadastro',
+    component: Cadastro
+  },
+]
+
+para selecionar o parametro da rota
+
+ this.$route.params.dado
+
+e quando voce desejar link dinamico e assim  que se faz
+
+   <router-link :to="{name:'Cadastro', params:{dado:'Antonio e um gato'}}">Cadastro</router-link>

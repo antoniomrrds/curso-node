@@ -128,3 +128,14 @@ para selecionar o parametro da rota
 e quando voce desejar link dinamico e assim  que se faz
 
    <router-link :to="{name:'Cadastro', params:{dado:'Antonio e um gato'}}">Cadastro</router-link>
+
+  Qual a Diferença entre Signed e Unsigned
+
+  signed  => aceita valores negativos
+
+  Unsigned =>  não aceita valores negativos
+
+
+  GUID ou UUID serve para gerar token pra recuperar senha pois nunca se repete 
+  https://www.npmjs.com/package/js-guid
+  npm install js-guid

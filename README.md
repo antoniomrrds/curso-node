@@ -1,2 +1,2 @@
-# Curso-de-Node-js
-Ministrado por guia do programador
+# curso-node
+Ministrado por victor lima Guia do programador

@@ -1,0 +1,22 @@
+<%- include('partials/header')  %>
+<body>
+    <%- include('partials/navBar')  %>
+    <div class="container">
+        <div class="card mt-5 mb-5">
+            <div class="card-header">
+                <h3>Realizar pergunta</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/salvarPergunta">
+                    <label class="mt-2 mb-2" for="titulo">Titulo</label>
+                    <input type="text" name="titulo" placeholder="Titulo" id="titulo" class="form-control">
+                    <label class="mt-2 mb-2" for="descricao">Descrição</label>
+                    <textarea  name="descricao" placeholder="Descreva sua pergunta" id="pergunta-descricao" class="form-control"></textarea>
+                    <button  class="btn btn-info mt-4">perguntar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Essa termologia serve para carregar html de outro arquivo ejs aqui  -->
+<%- include('partials/footer')  %>

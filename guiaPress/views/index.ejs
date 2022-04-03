@@ -1,0 +1,50 @@
+<%- include('partials/header') %>
+  <%- include('partials/homeNavbar') %>
+
+    <body>
+      <div class="container">
+
+        <div class="jumbotron mt-5 mb-5 rounded p-3 bg-dark text-primary  text-center">
+          <h1 class="display-4">Bem Vindo</h1>
+          <p class="lead"> Projeto do guia do programador.</p>
+          <hr class="my-4">
+          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          </p>
+        </div>
+        <div class="text-center">
+
+          <% articles.forEach(article=> {%>
+            <div class="card mb-3 border border-primary">
+              <div class="card-header bg-dark text-primary border border-primary">
+                <h2>
+                  <%=article.title %>
+                </h2>
+              </div>
+              <div class="card-body">
+
+                <a href="/<%= article.slug %>" class="btn btn-lg btn-primary">Ler Artigo</a>
+              </div>
+            </div>
+
+            <%})%>
+
+        </div>
+        <nav aria-label="...">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <span class="page-link">Previous</span>
+            </li>
+            
+              <li class="page-item active"><a class="page-link" name="value">1</a></li>
+              
+
+                <li class="page-item">
+                  <a class="page-link" href="/articles/page/1">Next</a>
+                </li>
+          </ul>
+        </nav>
+      </div>
+    </body>
+    <%- include('partials/footer') %>

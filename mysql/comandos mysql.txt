@@ -1,0 +1,108 @@
+mostrar databases
+
+show databases;
+
+
+Criando o banco de dados
+Listagem 1: Criando banco de dados
+CREATE DATABASE bancodeteste;
+Como podemos ver, a sintaxe é bem intuitiva e com um leve conhecimento da língua inglesa fica mais fácil ainda de entender.
+
+Após criar o bando de dados, precisamos avisar ao mysql que vamos usá-lo, para isso basta escrevermos.
+
+Listagem 2: Usando o banco de dados
+USE bancodeteste;
+Feito isso o nosso banco de dados está criado, faltando apenas criar a nossa tabela. Para isso vamos usar o comando CREATE TABLE.
+
+Criando tabelas
+Listagem 3: Criando tabelas
+CREATE TABLE fornecedores(
+codigo int(4) AUTO_INCREMENT,
+nome varchar(30) NOT NULL,
+email varchar(50),
+PRIMARY KEY (codigo)
+);
+Como podemos ver, nossa tabela está criada.
+
+Tabela criada
+Figura 1: Tabela criada.
+Agora vamos às explicações do que se tratam os comandos:
+
+AUTO_INCREMENT pode ser utilizado para automatizar um código que sirva de chave primária de uma tabela.
+PRIMARY KEY define a chave primária da tabela, isto é, o campo que serve como chave da tabela e que não pode ser repetido.
+NOT NULL define que um determinado campo seja de preenchimento obrigatório.
+Agora já temos um banco de dados e uma tabela criada, com isso é possível manipular os dados do banco de dados.
+
+INSERT
+Agora vamos inserir alguma informação na nossa tabela, para isso vamos usar o comando INSERT, é bem simples também.
+
+Listagem 4: Inserindo Dados
+INSERT INTO fornecedores(codigo, nome, email) VALUES (null, “Ricardo”, “ricoarrigoni@gmail.com”) ;
+INSERT INTO fornecedores(codigo, nome, email) VALUES (null, “João”, “joao@gmail.com”) ;
+INSERT INTO fornecedores(codigo, nome, email) VALUES (null, “Maria”, “maria@gmail.com”) ;
+ Dados inseridos na tabela
+Figura 2: Dados inseridos na tabela.
+SELECT
+Agora que nossa tabela está com alguns registros inseridos nela, nós vamos usar o comando SELECT pra poder selecionar e buscar esses registros. Continuaremos no mesmo terminal e iremos digitar o seguinte código:
+
+Listagem 5: Usando o comando SELECT
+SELECT * FROM fornecedores;
+O Resultado desse SELECT nós vemos na Figura 5.
+
+Resultado do Select global
+Figura 5: Resultado do SELECT global.
+Como podemos perceber, todos os registros da tabela foram retornados. Isso se deu porque o uso do SELECT * faz com que a consulta retorne todos os valores da tabela.
+
+Mas o comando SELECT permite diversas variações e combinações nele, podemos buscar exatamente o que queremos e do jeito que queremos, por exemplo.
+
+Se quisermos buscar apenas o e-mail do fornecedor nós podemos, basta fazer da seguinte forma:
+
+Listagem 6: Usando o SELECT específico
+SELECT email FROM fornecedores;
+Nesse caso ele irá exibir somente o que está no campo email do registro.
+
+Select específico
+Figura 3: SELECT específico.
+ORDER BY
+Se em nossa consulta sql nós quisermos que os registros retornados venham ordenados, nós podemos usar o comando ORDER BY, basta dizer pelo que você quer ordenar que ele traz o registro ordenado.
+
+Listagem 7: SELECT usando ORDER BY
+SELECT * FROM fornecedores ORDER BY nome asc;
+Dessa forma, os registros retornados virão ordenados pelo campo nome em ordem alfabética. Mas como eu sei que virá em ordem alfabética?
+
+Quando eu uso o termo “asc” eu digo que quero em ordem ascendente, se eu quiser fazer um SELECT que venha em ordem descendente, basta utilizarmos o “desc”.
+
+O resultado da nossa busca pode ser visto aqui:
+
+Select ordenado por ordem alfabética
+Figura 4: SELECT ordenado por ordem alfabética.
+UPDATE
+Para alterar um registro, usamos o comando UPDATE, com ele é possível editar os campos de sua tabela e colocar outro valor neles.
+
+Listagem 8: Editando registros
+UPDATE fornecedores SET nome=”Ricardo Arrigoni” WHERE codigo=1;
+Após esse comando, o nome “Ricardo” será alterado para “Ricardo Arrigoni”, vamos novamente dar um SELECT na tabela para poder ver o registro alterado
+
+Listagem 9: SELECT para ver os dados atualizados
+SELECT * FROM fornecedores;
+Editando registros
+Figura 5: Editando registros.
+Como vimos no exemplo anterior, estamos usando uma cláusula chama de WHERE em nosso SQL, essa cláusula é responsável por definir qual registro específico da tabela vai ser afetado pelo comando SQL.
+
+DELETE
+Por último e não menos importante, vamos falar do comando DELETE. Ele é o responsável por remover todo e qualquer registro do bando de dados.
+
+Nota:
+
+Uma vez executado, esse comando não é reversível, portanto tome bastante cuidado ao deleter algum registro de seu banco de dados.
+
+Agora que já sabemos o que ele faz e que devemos tomar muito cuidado ao utilizá-lo, vamos ver como usar ele em nosso exemplo.
+
+Listagem 10: Deletando dados
+DELETE FROM fornecedores WHERE codigo=3;
+Saiba mais: Comandos básicos em SQL - INSERT, UPDATE, DELETE e SELECT
+
+Depois de executar esse comando o nosso registro de codigo=3 foi excluído do banco de dados e ele não poderá ser recuperado, ficamos então com apenas 2 registros em nossa tabela.
+
+Deletando dados da tabela
+Figura 6: Deletando dados da tabela.

@@ -1,0 +1,11 @@
+Raw - "SELECT * FROM post" // mysql2
+ORM - MOdels -> Artigos.create({Title: "Como fazer ..."})
+Query Builders -> banco.select()
+            .where({
+                id:7
+            })
+            .orWhere({
+                title:"JS"
+            })
+            .orderBy("title").table("post")
+            //SELECT * FROM post WHERE id = 7 OR title = 'js' ORDER_BY title

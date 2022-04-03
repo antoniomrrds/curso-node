@@ -1,0 +1,58 @@
+<%- include('../../partials/header') %>
+    <%- include('../../partials/navbar') %>
+
+        <div class="container">
+            <hr>
+            <div class="card bg-dark text-primary">
+                <div class="card-header bg-dark text-primary">
+                    <h2>Edição de Artigos</h2>
+                </div>
+
+                <div class="card-body">
+                    <form method="post" action="/articles/update">
+                        <input type="hidden" name="id" value="<%= article.id %>">
+                        <input class="form-control mb-3" type="text" name="title" id="name-title"
+                            placeholder="Defina o título do Artigo" value="<%= article.title%>">
+
+                        <textarea name="body" class="form-control mb-3" placeholder="Escreva o artigo aqui!"
+                            id="article"><%= article.body %></textarea>
+                        <label class="mt-3 mb-3">Categoria</label>
+                        <select name="category" class="form-control">
+                            <% categories.forEach((category)=> {%>
+                                <% if(category.id == article.categoryId){ %>
+
+                                    <option value="<%= category.id %>" selected>
+                                        <%= category.title %>
+                                    </option>
+
+                                    <% }else{%>
+                                        <option value="<%= category.id %>">
+                                            <%= category.title %>
+                                        </option>
+                                        <%}%>
+                                            <% })%>
+                        </select>
+                        <button class="btn btn-primary btn-lg text-dark mt-3">Atualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <%- include('../../partials/footer') %>
+
+            </script>
+
+            <script src="/tinymce/tinymce.min.js"></script>
+            <script>
+                tinymce.init({
+                    language: 'pt_BR',
+                    selector: "#article",
+                    plugins: [
+                        'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons+'
+                    ],
+
+                })
+
+            </script>

@@ -1,0 +1,42 @@
+* {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: lime;
+    text-align: center;
+}
+
+.box {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    background: url("../img/Critica.jpg")no-repeat;
+    background-size: cover;
+    border-right: 2px solid red;
+
+
+}
+
+.box li {
+    margin: 10px;
+    border-bottom: 2px solid lime;
+}
+h2{
+    border-bottom: 2px solid salmon;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    width: max-content;
+}

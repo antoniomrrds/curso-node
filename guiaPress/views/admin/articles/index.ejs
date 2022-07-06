@@ -57,6 +57,7 @@
                 function confirmarDelecao(event, form) {
                     event.preventDefault();
                     let decision = confirm("Voce quer deletar este Artigo ? ")
+                    
                     if (decision) {
                         form.submit();
                     }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <h1>Chat</h1>
+    <div id="chat"></div>
+    <input type="text" name="" id="msg" class="form-control" placeholder="Msg..."><br>
+    <input type="text" name="" id="userName" placeholder="Seu nome de usuário" class="form-control" ><br>
+    <div class="d-grid gap-2 mx-auto">
+
+        <button class="btn btn-primary" onclick="submit()">Enviar</button>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+<script>
+    const  socket = io("http://localhost:3100");
+    socket.on("disconnect" ,_=>{
+        console.log("Desconectado !!!")
+    })
+    socket.on("showMsg",(data)=>{
+        const chat =  document.getElementById("chat")
+        const p = document.createElement("p")
+        p.innerHTML = `${data.user} : ${data.msg}` 
+        chat.append(p)
+    })
+
+    const submit = _=>{
+        const msgField = document.getElementById("msg").value
+        const userField = document.getElementById("userName").value
+        socket.emit("msg",{
+            msg:msgField,
+            user:userField
+        })
+
+    }
+
+</script>
+</html>

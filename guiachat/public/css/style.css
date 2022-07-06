@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+   
+}
+#chat{
+    max-height:350px;
+    min-height:350px;
+    background-color:aliceblue;
+    overflow-y:scroll;
+}

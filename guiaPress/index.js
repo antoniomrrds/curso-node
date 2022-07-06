@@ -139,5 +139,5 @@ app.get("/category/:slug", (req, res) => {
             res.redirect('/')
       })
 })
-const port = 1818;
+const port = 5000 ;
 app.listen(port, _ => console.log(`O servidor etá on na porta ${port} !!!`))

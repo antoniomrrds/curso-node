@@ -12,7 +12,7 @@ npm install --save (e o nome da dependencia)
 
 npm intall axios => serve para comunicar com uma api criada ou consumir uma
 npm  i html-pdf --save => gerando html em pdf 
-
+npm i --save socket.io => conexao direta com server
 
 
 ---------- js e html -----------------
@@ -139,3 +139,21 @@ e quando voce desejar link dinamico e assim  que se faz
   GUID ou UUID serve para gerar token pra recuperar senha pois nunca se repete 
   https://www.npmjs.com/package/js-guid
   npm install js-guid
+
+
+mongo js =>
+  collection == bjson
+cap = theorem
+  consistency => certeza de cadartro no banco de dados
+  partition-tolerance => evitar erro e salvar 
+  avaliabity => independe do que acontece ele vai te responder
+
+
+  para fazer validacoes lembre da biblioteca :
+  https://igorescobar.github.io/jQuery-Mask-Plugin/
+
+
+para enviar emails no node usasse o nodemailer
+ npm install --save nodemailer nodemailer-smtp-transport
+
+ caso usara o gmail lembre que precisa configurar a senha de 2 fatores

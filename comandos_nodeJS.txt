@@ -157,3 +157,42 @@ para enviar emails no node usasse o nodemailer
  npm install --save nodemailer nodemailer-smtp-transport
 
  caso usara o gmail lembre que precisa configurar a senha de 2 fatores
+
+
+=========TDD===============
+
+
+
+
+
+jest  => npm i jest
+
+caso tiver dando problema com os tipos do jest e so instalar o comando
+
+npm i @types/jest
+
+para testar se aplicaçao esta rodando na porta 
+utilizamos o  super test | axios para testar a rota  
+
+npm  i supertest
+
+//caso de o erro de fail not defined 
+
+npm i jest-jasmine2
+
+
+
+adicione o arquivo com nome "jest.config.js" e os dados abaixo
+module.exports = {
+    testEnvironment : 'node',
+    testRunner: "jest-jasmine2" 
+};
+
+
+---------very important====================================
+
+ao usar o auth secret lembre de dar o comando 
+e o arquivo .env na suba para o git a nao ser  que voce  esteja aprendendo pois tem dados sensiveis da aplicacao
+npm i dotenv
+
+ 

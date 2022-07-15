@@ -189,10 +189,19 @@ module.exports = {
 };
 
 
+
+
+
 ---------very important====================================
 
 ao usar o auth secret lembre de dar o comando 
 e o arquivo .env na suba para o git a nao ser  que voce  esteja aprendendo pois tem dados sensiveis da aplicacao
 npm i dotenv
+
+
+
+// caso deseje colocar a extensao use o path 
+// const path = require("path");
+// path.extname(file.originalname)
 
  
